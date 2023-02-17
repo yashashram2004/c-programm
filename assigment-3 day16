@@ -1,0 +1,23 @@
+#include<stdio.h>
+
+int main() {
+    int n1, n2, seven = 0, sodd = 0;
+    printf("Enter the range: ");
+    scanf("%d", &n1);
+    printf("Enter the dividing value: ");
+    scanf("%d", &n2);
+
+    for (int i = 1; i <= n1; i++) {
+        if (i % n2 == 0) {
+            printf("%d\n",i);
+            if (i % 2 == 0) {
+                seven += i;
+            } else {
+                sodd += i;
+            }
+        }
+    }
+    printf("Sum of even numbers: %d\n", seven);
+    printf("Sum of odd numbers : %d\n", sodd);
+    return 0;
+}
